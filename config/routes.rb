@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :orders, :only =>[:new, :index]
+  resources :orders, :only =>[:new, :index, :create]
 
   resources :questionnaires, :only => [:create]
 

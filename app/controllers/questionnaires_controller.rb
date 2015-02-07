@@ -3,6 +3,10 @@ class QuestionnairesController < ApplicationController
   def create
     q = Questionnaire.new q_params
     q.save
+
+
+    redirect_to new_order_path(@order, :q_id => q.id)
+
   end
 
   def new

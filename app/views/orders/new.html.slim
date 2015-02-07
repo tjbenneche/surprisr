@@ -1,0 +1,4 @@
+= form_for Order.new, html: {class:'form-area'} do |f|
+  = f.hidden_field :q_id, value: @q_id.to_i
+  = f.text_field :customer_email
+  = f.submit 'submit'
