@@ -1,3 +1,10 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+
+$(document).on 'click', '.next', (e) ->
+  _this = $(this)
+  $.when(_this.parent().fadeOut()).done () ->
+    _this.parent().next('.question').fadeIn()
+
+$(document).on 'click', '.prev', (e) ->
+  _this = $(this)
+  $.when(_this.parent().fadeOut()).done () ->
+    _this.parent().prev('.question').fadeIn()

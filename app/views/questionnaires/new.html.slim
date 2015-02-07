@@ -1,1 +1,60 @@
-h1 questionaire form
+= form_for Questionnaire.new, html: {class:'form-area'}, remote:'true' do |f|
+
+  .question.first
+    p.question-copy Question one?
+    = f.text_field :q1, :placeholder => 'your answer', :class => 'answer'
+    p.next Next
+
+  .question
+    p.question-copy Question two?
+    = f.text_field :q2, :placeholder => 'your answer', :class => 'answer'
+    p.prev Prev
+    p.next Next
+
+  .question
+    p.question-copy Question three?
+    = f.text_field :q3, :placeholder => 'your answer', :class => 'answer'
+    p.prev Prev
+    p.next Next
+
+  .question
+    p.question-copy Question four?
+    = f.text_field :q4, :placeholder => 'your answer', :class => 'answer'
+    p.prev Prev
+    p.next Next
+
+  .question
+    p.question-copy Question five?
+    = f.text_field :q5, :placeholder => 'your answer', :class => 'answer'
+    p.prev Prev
+    p.next Next
+
+  .question
+    p.question-copy Question six?
+    = f.text_field :q6, :placeholder => 'your answer', :class => 'answer'
+    p.prev Prev
+    p.next Next
+
+  .question
+    p.question-copy Question seven?
+    = f.text_field :q7, :placeholder => 'your answer', :class => 'answer'
+    p.prev Prev
+    p.next Next
+
+  .question
+    p.question-copy Question eight?
+    = f.text_field :q8, :placeholder => 'your answer', :class => 'answer'
+    p.prev Prev
+    p.next Next
+
+  .question
+    p.question-copy Question nine?
+    = f.text_field :q9, :placeholder => 'your answer', :class => 'answer'
+    p.prev Prev
+    p.next Next
+
+  .question
+    p.question-copy Question ten?
+    = f.text_field :q10, :placeholder => 'your answer', :class => 'answer'
+    p.prev Prev
+    = f.submit 'Give us your money', class: "submit-questionnaire"
