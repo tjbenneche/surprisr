@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #For payment processing
-gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'stripe-rails'
 
 #For descriptive errors
 gem 'better_errors'
