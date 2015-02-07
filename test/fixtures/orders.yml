@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_email: MyString
+  date: 2015-02-07 14:35:16
+  recipient_name: MyString
+  recipient_address: MyText
+  price_tier: 1
+  tracking_id: MyString
+  purchased: false
+
+two:
+  customer_email: MyString
+  date: 2015-02-07 14:35:16
+  recipient_name: MyString
+  recipient_address: MyText
+  price_tier: 1
+  tracking_id: MyString
+  purchased: false
