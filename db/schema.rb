@@ -11,12 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207202811) do
+ActiveRecord::Schema.define(version: 20150207205404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "questionaires", force: true do |t|
+  create_table "orders", force: true do |t|
+    t.string   "customer_email"
+    t.datetime "date"
+    t.string   "recipient_name"
+    t.text     "recipient_address"
+    t.integer  "price_tier"
+    t.string   "tracking_id"
+    t.boolean  "purchased"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questionnaires", force: true do |t|
     t.string   "order_id"
     t.text     "name"
     t.datetime "created_at"
