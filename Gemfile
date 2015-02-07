@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+#For payment processing
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
+#For descriptive errors
+gem 'better_errors'
+
+#Use ruby slim for templates
+gem 'slim-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
