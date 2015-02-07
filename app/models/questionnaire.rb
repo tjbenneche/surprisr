@@ -1,2 +1,2 @@
-class Questionaire < ActiveRecord::Base
+class Questionnaire < ActiveRecord::Base
 end
