@@ -1,4 +1,47 @@
-= form_for Order.new, html: {class:'form-area'} do |f|
+= form_for Order.new, html: {class:'form-area', id: "order-form"}, remote: true, authenticity_token: true do |f|
   = f.hidden_field :q_id, value: @q_id.to_i
-  = f.text_field :customer_email
-  = f.submit 'submit'
+  = f.hidden_field :recipient_address
+  .question.first
+    p.question-copy Under the USA PATRIOT Act we are required to collect your email. Please oblige.
+    = f.text_field :customer_email, :class => 'answer', autofocus: "true", placeholder: "jk they already have it but like we totes need it"
+    p.next Next
+  .question
+    p.question-copy Who is the poor sap you are wasting your money on?
+    = f.text_field :recipient_name, :class => 'answer', autofocus: "true"
+    p.prev Prev
+    p.next Next
+  .question
+    p.question-copy Go on. Tell us where they live.
+    input.name.answer placeholder="Full Name"
+    input.street.answer placeholder="Street Address"
+    input.city.answer placeholder="City"
+    input.state.answer placeholder="State"
+    input.zip.answer placeholder="Zip Code"
+    p.prev Prev
+    p.next Next
+  .question#price-tier
+    p.question-copy How much is this person worth to you?
+    = f.radio_button :price_tier, value: "one"
+    = f.radio_button :price_tier, value: "two"
+    = f.radio_button :price_tier, value: "three"
+    = f.radio_button :price_tier, value: "four"
+    p.prev Prev
+
+form action="" method="POST" id="payment-form"
+  span class="payment-errors"
+  .form-row
+    label
+      span Card Number
+      input type="text" size="20" data-stripe="number"
+  .form-row
+    label
+      span CVC
+      input type="text" size="4" data-stripe="cvc"
+  .form-row
+    label
+      span Expiration (MM/YYYY)
+      input type="text" size="2" data-stripe="exp-month"
+    label
+      span /
+      input type="text" size="4" data-stripe="exp-year"
+    button type="submit" Submit Payment

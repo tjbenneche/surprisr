@@ -8,13 +8,11 @@ class OrdersController < ApplicationController
     order = Order.new o_params
     order.save
 
-    redirect_to orders_path
-
   end
 
   private
   def o_params
-    params.require(:order).permit(:q_id, :customer_email)
+    params.require(:order).permit(:q_id, :customer_email, :recipient_address, :recipient_name, :price_tier)
   end
 
 end

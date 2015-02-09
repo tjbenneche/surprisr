@@ -1,60 +1,60 @@
 = form_for Questionnaire.new, html: {class:'form-area'} do |f|
 
   .question.first
-    p.question-copy Question one?
-    = f.text_field :q1, :placeholder => 'your answer', :class => 'answer'
+    p.question-copy Are you more likely to find this person in a crack den or a Mormon church?
+    = f.text_field :q1, :placeholder => 'This is important.', :class => 'answer', autofocus: "true"
     p.next Next
 
   .question
-    p.question-copy Question two?
-    = f.text_field :q2, :placeholder => 'your answer', :class => 'answer'
+    p.question-copy two
+    = f.text_field :q2, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     p.next Next
 
   .question
-    p.question-copy Question three?
-    = f.text_field :q3, :placeholder => 'your answer', :class => 'answer'
+    p.question-copy three
+    = f.text_field :q3, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     p.next Next
 
   .question
     p.question-copy Question four?
-    = f.text_field :q4, :placeholder => 'your answer', :class => 'answer'
+    = f.text_field :q4, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     p.next Next
 
   .question
     p.question-copy Question five?
-    = f.text_field :q5, :placeholder => 'your answer', :class => 'answer'
+    = f.text_field :q5, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     p.next Next
 
   .question
     p.question-copy Question six?
-    = f.text_field :q6, :placeholder => 'your answer', :class => 'answer'
+    = f.text_field :q6, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     p.next Next
 
   .question
     p.question-copy Question seven?
-    = f.text_field :q7, :placeholder => 'your answer', :class => 'answer'
+    = f.text_field :q7, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     p.next Next
 
   .question
     p.question-copy Question eight?
-    = f.text_field :q8, :placeholder => 'your answer', :class => 'answer'
+    = f.text_field :q8, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     p.next Next
 
   .question
     p.question-copy Question nine?
-    = f.text_field :q9, :placeholder => 'your answer', :class => 'answer'
+    = f.text_field :q9, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     p.next Next
 
   .question
     p.question-copy Question ten?
-    = f.text_field :q10, :placeholder => 'your answer', :class => 'answer'
+    = f.text_field :q10, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     = f.submit 'Give us your money', class: "submit-questionnaire"
