@@ -51,6 +51,19 @@ body {
   &.first{
     display:block;
   }
+  .checkbox{
+    display:block;
+    padding:1rem 0;
+    text-align:left;
+    width:50%;
+    margin:auto;
+    font-size:1.5rem;
+    input{
+      margin-right:1rem;
+      vertical-align:middle;
+      height:1.5rem;
+    }
+  }
   .answer{
     background-color:transparent;
     color:white;

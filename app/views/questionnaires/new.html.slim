@@ -1,8 +1,16 @@
 = form_for Questionnaire.new, html: {class:'form-area'} do |f|
 
   .question.first
-    p.question-copy Are you more likely to find this person in a crack den or a Mormon church?
-    = f.text_field :q1, :placeholder => 'This is important.', :class => 'answer', autofocus: "true"
+    p.question-copy What is their favorite Harry Potter movie?
+    = f.hidden_field :q1, :id => "q1-hidden"
+    label.checkbox
+      input type="checkbox" value="1" 1
+    label.checkbox
+      input type="checkbox" value="3" 3
+    label.checkbox
+      input type="checkbox" value="Return of the Jedi" Return of the Jedi
+    label.checkbox
+      input type="checkbox" value="Fuck Harry Potter" Fuck Harry Potter
     p.next Next
 
   .question

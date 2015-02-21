@@ -13,8 +13,12 @@ $(document).on 'click', '.prev', (e) ->
 
 
 #might want to put in additional conditional for address field so enter advances to next field
-$(document).on 'keydown', '.question .answer', (e) ->
+$(document).on 'keydown', '.question .answer, .question input', (e) ->
   _this = $(this)
   if e.keyCode is 13
     e.preventDefault()
     _this.siblings('.next').trigger 'click'
+
+$(document).on 'click', '.question input[type="checkbox"]', (e) ->
+  val = $(this).attr('value')
+  $('#q1-hidden').attr 'value', val

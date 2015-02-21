@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #For payment processing
-gem 'stripe-rails'
+gem 'stripe'
 
 #For descriptive errors
 gem 'better_errors'
@@ -45,4 +45,3 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
