@@ -1,5 +1,5 @@
 
-$(document).on 'click', '.next', (e) ->
+$(document).on 'click', '.next, .get-started', (e) ->
   _this = $(this)
   $.when(_this.parent().fadeOut()).done () ->
     _this.parent().next('.question').fadeIn().find('.answer:first').focus()
@@ -30,10 +30,14 @@ $(document).on 'click', '#nope_lol', (e) ->
 
 cornifyRickRoll = () ->
   i = 0
-  while i < 500
+  while i < 1000
     cornify_add()
     i++
   setInterval (->
     # this code is executed every 500 milliseconds:
     window.location.href = "http://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  ), 5000
+  ), 2500
+
+$(document).on 'click', '.hamburger', (e) ->
+  $(this).toggleClass "shifted"
+  $(this).siblings('nav').toggleClass "shifted"
