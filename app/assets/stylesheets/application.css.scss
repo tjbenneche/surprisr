@@ -24,7 +24,7 @@ time, mark, audio, video {
 body {
   line-height: 1;
   font-size:10px;
-  background-color:#C9905E;
+  background-color:#B8E0F4;
   font-family: "Comic Sans MS", cursive, sans-serif;
   color:#311F5C;
 }
@@ -41,6 +41,29 @@ body {
   position:fixed;
   img{
     width:8rem;
+  }
+  nav{
+    float:right;
+    li{
+      display:inline-block;
+      margin:1rem;
+    }
+    .hamburger{
+      width:3rem;
+    }
+    ul{
+      display:none;
+    }
+  }
+  @media (min-width:768px){
+    nav{
+      .hamburger{
+        display:none;
+      }
+      ul{
+        display:block;
+      }
+    }
   }
 }
 
