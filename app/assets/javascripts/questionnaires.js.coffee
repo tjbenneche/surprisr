@@ -19,6 +19,6 @@ $(document).on 'keydown', '.question .answer, .question input', (e) ->
     e.preventDefault()
     _this.siblings('.next').trigger 'click'
 
-$(document).on 'click', '.question input[type="checkbox"]', (e) ->
+$(document).on 'click', '.question input[type="radio"]', (e) ->
   val = $(this).attr('value')
   $('#q1-hidden').attr 'value', val
