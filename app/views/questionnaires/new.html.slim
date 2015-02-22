@@ -3,17 +3,18 @@
 
   .question.first
     p.question-copy Need to get a gift or whatever for someone but lack the creativity and/or motivation to shop for it yourself?
-    .get-started
-      p I love that Surprisr! takes what I say about my friend in the following questions and:
-      ul
-        li Picks out a personalized gift for them
-        li takes money from my wallet
-        li and sends my friend their Special Gift
+    .nav-buttons
+      .get-started
+        p I love that Surprisr! takes what I say about my friend in the following questions and:
+        ul
+          li Picks out a personalized gift for them
+          li takes money from my wallet
+          li and sends my friend their Special Gift
 
-      p All with me answering a few simple questions!
-      p Hecks yes lets do this!
-    .dont-get-started
-      p#nope_lol This doesn&#39;t sound like a think I would like
+        p All with me answering a few simple questions!
+        p Hecks yes lets do this!
+      .dont-get-started
+        p#nope_lol This doesn&#39;t sound like a think I would like
 
   .question
     p.question-copy What is their favorite Harry Potter movie?
@@ -26,56 +27,80 @@
       input type="radio" name="q1" value="Return of the Jedi" Return of the Jedi
     label.checkbox
       input type="radio" name="q1" value="Fuck Harry Potter" Fuck Harry Potter
-    p.prev Prev
-    p.next Next
+    .nav-buttons
+      p.prev Prev
+      p.next Next
 
   .question
-    p.question-copy two
-    = f.text_field :q2, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
-    p.prev Prev
-    p.next Next
+    p.question-copy Who is their fantasy celebrity hookup?
+    = f.hidden_field :q2, :id => "q2-hidden"
+    .cage
+      p Nicolas Cage in Face/Off
+      = image_tag 'cage/faceoff.gif'
+    .cage
+      p Nicolas Cage in National Treasure
+      = image_tag 'cage/ntreasure.gif'
+    .cage
+      p Nicolas Cage in The Wicker Man
+      = image_tag 'cage/wickerman.gif'
+    .cage
+      p Nicolas Cage in Vampire's Kiss
+      = image_tag 'cage/vampire.gif'
+    .cage
+      p Andy Samberg as Nicolas Cage
+      = image_tag 'cage/samberg.gif'
+    .nav-buttons
+      p.prev Prev
+      p.next Next
 
   .question
     p.question-copy three
     = f.text_field :q3, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
-    p.prev Prev
-    p.next Next
+    .nav-buttons
+      p.prev Prev
+      p.next Next
 
   .question
     p.question-copy Question four?
     = f.text_field :q4, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
-    p.prev Prev
-    p.next Next
+    .nav-buttons
+      p.prev Prev
+      p.next Next
 
   .question
     p.question-copy Question five?
     = f.text_field :q5, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
-    p.prev Prev
-    p.next Next
+    .nav-buttons
+      p.prev Prev
+      p.next Next
 
   .question
     p.question-copy Question six?
     = f.text_field :q6, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
-    p.prev Prev
-    p.next Next
+    .nav-buttons
+      p.prev Prev
+      p.next Next
 
   .question
     p.question-copy Question seven?
     = f.text_field :q7, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
-    p.prev Prev
-    p.next Next
+    .nav-buttons
+      p.prev Prev
+      p.next Next
 
   .question
     p.question-copy Question eight?
     = f.text_field :q8, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
-    p.prev Prev
-    p.next Next
+    .nav-buttons
+      p.prev Prev
+      p.next Next
 
   .question
     p.question-copy Question nine?
     = f.text_field :q9, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
-    p.prev Prev
-    p.next Next
+    .nav-buttons
+      p.prev Prev
+      p.next Next
 
   .question
     p.question-copy Question ten?

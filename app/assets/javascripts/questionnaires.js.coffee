@@ -1,14 +1,14 @@
 
 $(document).on 'click', '.next, .get-started', (e) ->
   _this = $(this)
-  $.when(_this.parent().fadeOut()).done () ->
-    _this.parent().next('.question').fadeIn().find('.answer:first').focus()
+  $.when(_this.parents().eq(1).fadeOut()).done () ->
+    _this.parents().eq(1).next('.question').fadeIn().find('.answer:first').focus()
 
 
 $(document).on 'click', '.prev', (e) ->
   _this = $(this)
-  $.when(_this.parent().fadeOut()).done () ->
-    _this.parent().prev('.question').fadeIn().find('.answer:first').focus()
+  $.when(_this.parents().eq(1).fadeOut()).done () ->
+    _this.parents().eq(1).prev('.question').fadeIn().find('.answer:first').focus()
 
 
 
@@ -41,3 +41,7 @@ cornifyRickRoll = () ->
 $(document).on 'click', '.hamburger', (e) ->
   $(this).toggleClass "shifted"
   $(this).siblings('nav').toggleClass "shifted"
+
+$(document).on 'click', '.cage', (e) ->
+  val = $(this).find('p').text()
+  $('#q2-hidden').attr 'value', val
