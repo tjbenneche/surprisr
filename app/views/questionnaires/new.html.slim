@@ -1,16 +1,17 @@
+= render 'shared/header'
 = form_for Questionnaire.new, html: {class:'form-area'} do |f|
 
   .question.first
     p.question-copy What is their favorite Harry Potter movie?
     = f.hidden_field :q1, :id => "q1-hidden"
     label.checkbox
-      input type="checkbox" value="1" 1
+      input type="radio" name="q1" value="1" Harry Potter & The Sorceror&#39;s Stone
     label.checkbox
-      input type="checkbox" value="3" 3
+      input type="radio" name="q1" value="3" Harry Potter & The Philosopher&#39;s Stone, bitch.
     label.checkbox
-      input type="checkbox" value="Return of the Jedi" Return of the Jedi
+      input type="radio" name="q1" value="Return of the Jedi" Return of the Jedi
     label.checkbox
-      input type="checkbox" value="Fuck Harry Potter" Fuck Harry Potter
+      input type="radio" name="q1" value="Fuck Harry Potter" Fuck Harry Potter
     p.next Next
 
   .question
@@ -66,3 +67,6 @@
     = f.text_field :q10, :placeholder => 'your answer', :class => 'answer', autofocus: "true"
     p.prev Prev
     = f.submit 'Give us your money', class: "submit-questionnaire"
+
+  button#nope_lol nah
+= javascript_include_tag "http://www.cornify.com/js/cornify.js"

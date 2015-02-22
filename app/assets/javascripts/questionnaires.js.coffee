@@ -19,6 +19,21 @@ $(document).on 'keydown', '.question .answer, .question input', (e) ->
     e.preventDefault()
     _this.siblings('.next').trigger 'click'
 
-$(document).on 'click', '.question input[type="checkbox"]', (e) ->
+$(document).on 'click', '.question input[type="radio"]', (e) ->
   val = $(this).attr('value')
   $('#q1-hidden').attr 'value', val
+
+
+$(document).on 'click', '#nope_lol', (e) ->
+  e.preventDefault()
+  cornifyRickRoll()
+
+cornifyRickRoll = () ->
+  i = 0
+  while i < 500
+    cornify_add()
+    i++
+  setInterval (->
+    # this code is executed every 500 milliseconds:
+    window.location.href = "http://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  ), 5000
